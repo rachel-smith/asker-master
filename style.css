@@ -1,0 +1,41 @@
+body{
+	background-color:rgb(255,255,255);
+	padding: 0px;
+	font-family: 'Lato', sans-serif;
+	margin: 0px 0px 0px 0px;
+}
+
+.title{
+	font-size: 200%;
+	font-weight: bold;
+}
+div#footer {
+	color: #666;
+	border-top: 2px solid #666;
+	padding: 30px;
+}
+
+.btn-primary {
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
+div#notarapper {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+h2 {
+	font-family: Lato;
+	font-size: 48px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+div#sidebuttons {
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+}
