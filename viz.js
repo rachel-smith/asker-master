@@ -14,7 +14,7 @@ var librs = librs || {};
 
 google.load('visualization', '1', {packages: ['corechart']});
 
-google.setOnLoadCallback(vixInit);
+google.setOnLoadCallback(vizInit);
 
 //Variables.
 var data;
