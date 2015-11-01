@@ -55,7 +55,45 @@ function vizInit() {
 	queryObj.setQuery(query);
 	queryObj.send(function(e){
 		data = e.getDataTable();
-		var thisMajor = 
+		
+		//Get major we want to visualize.
+		var thisMajor = major[0];
+		
+		//Create object and get rows corresponding to thisMajor.
+		views[thisMajor] = new google.visualization.DataView(data);
+		
+		views[thisMajor].setRows(views[thisMajor].getFilteredRows([{
+		column : 2,
+		value : thisMajor}]));
+
+		// Get a subset of the columns.
+		views[thisMajor].setColumns([0, 3]);
+
+		// Draw the chart for the initial major.
+		chart.draw(views[thisMajor].toDataTable(), options);
+		
+		
 	});
 	
+};
+
+function vizController(thisMajor) {
+	//If the view is not null, draw the chart.
+	if(views[thisMajor]!=null) {
+		chart.draw(views[thisMajor].toDataTable(),options);
+	}	
+	else {
+		views[thisMajor] = new google.visualization.DataView(data);
+		views[thisMajor].setRows(views[thisYear].getFilteredRows([{
+			column: 2,
+			value: thisMajor}]));
+			
+			// Get a subset of the columns.
+			views[thisMajor].setColumns([0,3]);
+			
+			// Draw the chart.
+			chart.draw(views[thisMajor].toDataTable(), options);
+	}
+	
 }
+
