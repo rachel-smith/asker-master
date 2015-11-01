@@ -20,8 +20,9 @@ librs.ui = function() {
  * Date/author: Team Yoyodyne/10_1_15
  */
 var fetch = function() {
-	
-
+	var value = 5;
+	console.log(value);
+	vizController(value);
 };
 
 var count = 0;
@@ -30,7 +31,8 @@ var toggle = function() {
 };
 
 	var initialize = function() {
-		
+		bar button1 = document.getElementById('submit-btn');
+		button1.onclick = fetch;
 };
 
 // When this file is included at the bottom of the page,

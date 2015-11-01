@@ -25,11 +25,14 @@ var major = [5];
 
 //Set options for chart to be drawn.
 var options = {
-	width: 700,
+	width: 800,
 	height: 400,
 	title: '',
 	hAxis: {
-		title: ''
+		title: 'Asked category'
+	},
+	vAxis: {
+		title: 'Confidence Level'
 	},
 	legend: {
 		position: 'none'
@@ -46,28 +49,31 @@ function vizInit() {
 	chart = new google.visualization.ColumnChart(document.getElementById('ex0'));
 	
 	//Make the initial query to get the whole Fusion table.
-	var query = "";
+	console.log("I want sour patch kids");
+	var query = "SELECT 'Major category', 'Asked category', Total FROM 1fn29ujEZ0bobQsAqwnpqQ6ufIE46OWGZRr5JOjWR";
 	
 	var opts = {sendMethod: 'auto'};
-	var queryObj = new google.visualization.Query('',opts);
-	
+	var queryObj = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq=', opts);
+	console.log(queryObj);
 	//Send the query.
 	queryObj.setQuery(query);
 	queryObj.send(function(e){
 		data = e.getDataTable();
-		
+		console.log("here is the data:");
+		console.log(data);
 		//Get major we want to visualize.
-		var thisMajor = major[0];
+		//var thisMajor = "" + major[0]+"-"+major[0];
+		var thisMajor = 5;
 		
 		//Create object and get rows corresponding to thisMajor.
 		views[thisMajor] = new google.visualization.DataView(data);
 		
 		views[thisMajor].setRows(views[thisMajor].getFilteredRows([{
-		column : 2,
+		column : 0,
 		value : thisMajor}]));
 
 		// Get a subset of the columns.
-		views[thisMajor].setColumns([0, 3]);
+		views[thisMajor].setColumns([1, 2]);
 
 		// Draw the chart for the initial major.
 		chart.draw(views[thisMajor].toDataTable(), options);
@@ -85,11 +91,11 @@ function vizController(thisMajor) {
 	else {
 		views[thisMajor] = new google.visualization.DataView(data);
 		views[thisMajor].setRows(views[thisYear].getFilteredRows([{
-			column: 2,
+			column: 0,
 			value: thisMajor}]));
 			
 			// Get a subset of the columns.
-			views[thisMajor].setColumns([0,3]);
+			views[thisMajor].setColumns([1,2]);
 			
 			// Draw the chart.
 			chart.draw(views[thisMajor].toDataTable(), options);
