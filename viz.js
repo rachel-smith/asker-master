@@ -27,6 +27,7 @@ var major = [5];
 var options = {
 	width: 800,
 	height: 400,
+	colors: ['4D177E'],
 	title: '',
 	hAxis: {
 		title: 'Asked category'
