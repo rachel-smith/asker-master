@@ -1,41 +1,95 @@
 body{
-	background-color:rgb(255,255,255);
-	padding: 0px;
-	font-family: 'Lato', sans-serif;
-	margin: 0px 0px 0px 0px;
+    background-color:rgb(255,255,255);
+    font-family: 'Lato', sans-serif;
 }
 
-.title{
-	font-size: 200%;
-	font-weight: bold;
-}
 div#footer {
-	color: #666;
-	border-top: 2px solid #666;
-	padding: 30px;
-}
-
-.btn-primary {
-	background-color: #ffffff;
-	color: #ffffff;
+    clear: both;
+    color: #666;
+    border-top: 2px solid #666;
+    padding: 30px;
 }
 
 div#notarapper {
-	overflow: hidden;
-	white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-h2 {
-	font-family: Lato;
-	font-size: 48px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
+div#container1 {
+    padding: 30px;
 }
 
-div#sidebuttons {
-	overflow: hidden;
-	white-space: nowrap;
-	float: left;
+div#container2 {
+    padding: 60px;
+}
+
+
+div#bigtitle { /* This is the custom font properties for the big Title, 'By Major, Which..' */
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+}
+
+div#majortext { /* This is the custom font properties for 'Select a Major' */
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    text-align: center;
+}
+
+div#currentmajor { /* This is custom font properties for the current major selected text */
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    text-align: center;
+}
+
+div#buttonsfeelings { /* Special properties of the buttons */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+    text-align: center;
+}
+
+.btn { /* Boostrapped buttons graphics */
+    background: #9e54a8;
+    background-image: -webkit-linear-gradient(top, #9e54a8, #53286e);
+    background-image: -moz-linear-gradient(top, #9e54a8, #53286e);
+    background-image: -ms-linear-gradient(top, #9e54a8, #53286e);
+    background-image: -o-linear-gradient(top, #9e54a8, #53286e);
+    background-image: linear-gradient(to bottom, #9e54a8, #53286e);
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 40px 5px 40px;
+    border: solid #b8b8b8 2px !important;
+    text-decoration: none;
+    margin: 5px;
+    
+}
+
+.btn:hover { /* What the buttons look like when hovered over */
+    background: #a98eab;
+    background-image: -webkit-linear-gradient(top, #a98eab, #a477d1);
+    background-image: -moz-linear-gradient(top, #a98eab, #a477d1);
+    background-image: -ms-linear-gradient(top, #a98eab, #a477d1);
+    background-image: -o-linear-gradient(top, #a98eab, #a477d1);
+    background-image: linear-gradient(to bottom, #a98eab, #a477d1);
+    /*text-decoration: none;*/
+    color: #ffffff !important;
+}
+
+.btn:active { /* What the button looks like when clicked on */
+    background: #FFFF00
+}
+
+#content { /* The middle section of the body's properties */
+    margin-left: 30%;
+}
+#sidebar { /* The left section of the body's properties (all the buttons) */
+    float: left;
+    width: 30%;
 }
