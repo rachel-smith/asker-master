@@ -39,34 +39,41 @@ window.onload = function(){
 	console.log("Inside window onload!");
 	document.getElementById('bus-button').onclick=function(){
 		fetch(1);
+		document.getElementById('currentmajor').innerHTML = "Business"
 	}
 	document.getElementById('hum-button').onclick=function(){
 		fetch(2);
+		document.getElementById('currentmajor').innerHTML = "Humanities or History"
 	}
 	document.getElementById('art-button').onclick=function(){
 		fetch(3);
+		document.getElementById('currentmajor').innerHTML = "Arts"
 	}
 	document.getElementById('har-button').onclick=function(){
 		fetch(4);
+		document.getElementById('currentmajor').innerHTML = "Hard Sciences"
 	}
 	document.getElementById('com-button').onclick=function(){
 		fetch(5);
+		document.getElementById('currentmajor').innerHTML = "Comp Sci, Math, or Engineers"
 	}
 	document.getElementById('hea-button').onclick=function(){
 		fetch(6);
+		document.getElementById('currentmajor').innerHTML = "Health Professions"
 	}
 	document.getElementById('soc-button').onclick=function(){
 		fetch(7);
+		document.getElementById('currentmajor').innerHTML = "Social and Behavioral Sciences"
 	}
 	document.getElementById('edu-button').onclick=function(){
 		fetch(8);
+		document.getElementById('currentmajor').innerHTML = "Education"
 	}
 	document.getElementById('oth-button').onclick=function(){
 		fetch(9);
-	}
-	
+		document.getElementById('currentmajor').innerHTML = "Other"
+	}	
 }
-
 
 var initialize = function() {
 	
