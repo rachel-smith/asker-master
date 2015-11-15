@@ -22,7 +22,7 @@ var views = {};
 var totals = {};
 var chart;
 var major = [5];
-
+var thisMajor = 5;
 //Set options for chart to be drawn.
 var options = {
 	width: 800,
@@ -64,8 +64,8 @@ function vizInit() {
 		console.log(data);
 		//Get major we want to visualize.
 		//var thisMajor = "" + major[0]+"-"+major[0];
-		var thisMajor = 5;
-		
+		//var thisMajor = 5;
+		console.log("thisMajor: "+thisMajor);
 		//Create object and get rows corresponding to thisMajor.
 		views[thisMajor] = new google.visualization.DataView(data);
 		
@@ -84,22 +84,24 @@ function vizInit() {
 	
 };
 
-function vizController(thisMajor) {
+function vizController(theMajor) {
+	thisMajor=theMajor;
+	console.log("Inside vizController fxn. thisMajor: "+thisMajor);
 	//If the view is not null, draw the chart.
-	if(views[thisMajor]!=null) {
-		chart.draw(views[thisMajor].toDataTable(),options);
+	if(views[theMajor]!=null) {
+		chart.draw(views[theMajor].toDataTable(),options);
 	}	
 	else {
-		views[thisMajor] = new google.visualization.DataView(data);
-		views[thisMajor].setRows(views[thisYear].getFilteredRows([{
+		views[theMajor] = new google.visualization.DataView(data);
+		views[theMajor].setRows(views[theMajor].getFilteredRows([{
 			column: 0,
-			value: thisMajor}]));
+			value: theMajor}]));
 			
 			// Get a subset of the columns.
-			views[thisMajor].setColumns([1,2]);
+			views[theMajor].setColumns([1,2]);
 			
 			// Draw the chart.
-			chart.draw(views[thisMajor].toDataTable(), options);
+			chart.draw(views[theMajor].toDataTable(), options);
 	}
 	
 }

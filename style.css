@@ -83,7 +83,7 @@ div#buttonsfeelings { /* Special properties of the buttons */
 }
 
 .btn:active { /* What the button looks like when clicked on */
-    background: #FFFF00
+    background: #C0C0C0
 }
 
 #content { /* The middle section of the body's properties */
