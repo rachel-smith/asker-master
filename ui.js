@@ -12,8 +12,6 @@ var librs = librs || {};
 librs.ui = {};
 librs.ui = function() {
 
-
-//var myValue = 5;
 /**
  * function: fetch
  *
@@ -28,25 +26,15 @@ var fetch = function(val) {
 	vizController(val);
 };
 
-var fetch2 = function(val) {
-	var val = 2;
-	console.log("Inside fetch2(). val is: ");
-	console.log(val);
-	vizController(val);
-};
-
-var fetch3 = function(val) {
-	var val = 3;
-	console.log("Inside fetch3(). val is: ");
-	console.log(val);
-	vizController(val);
-};
-
-var count = 0;
 var toggle = function() {
 
 };
 
+/*
+ * function window onload
+ * purpose: buttons on left will toggle between data appropriately.
+ * author: Rachel Smith
+ */
 window.onload = function(){
 	console.log("Inside window onload!");
 	document.getElementById('bus-button').onclick=function(){
@@ -81,45 +69,7 @@ window.onload = function(){
 
 
 var initialize = function() {
-		var button1 = document.getElementById('bus-button');
-		console.log("Inside Initialize!");
-		myValue = 1;
-		//button1.onclick = fetch(1);
-		 button1.onclick = function(){
-   			// fetch(1);
-		 };
-		// button2.onclick = function(){
-   			// fetch(2);
-		// }
-		myValue2 = 2;
-		//console.log("myValue2: "+myValue2);
-		var button2 = document.getElementById('hum-button');
-		 button2.onclick = function(){
-   			 fetch2(2);
-		 }//
-		//button2.onclick = fetch2(2);
-		
-		
-		var button3 = document.getElementById('art-btn');
-		//button3.onclick = fetch3(3);
-		
-		var button4 = document.getElementById('har-btn');
-		//button4.onclick = fetch(4);
-		
-		var button5 = document.getElementById('com-btn');
-		//button5.onclick = fetch(5);
-		
-		var button6 = document.getElementById('hea-btn');
-		//button6.onclick = fetch(6);
-		
-		var button7 = document.getElementById('soc-btn');
-		//button7.onclick = fetch(7);
-		
-		var button8 = document.getElementById('edu-btn');
-		//button8.onclick = fetch(8);
-		
-		var button9 = document.getElementById('oth-btn');
-		//button9.onclick = fetch(9);
+	
 };
 
 // When this file is included at the bottom of the page,
