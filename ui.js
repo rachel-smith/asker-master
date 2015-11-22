@@ -55,7 +55,7 @@ window.onload = function(){
 	}
 	document.getElementById('com-button').onclick=function(){
 		fetch(5);
-		document.getElementById('currentmajor').innerHTML = "Comp Sci, Math, or Engineers"
+		document.getElementById('currentmajor').innerHTML = "Comp Sci, Math, or Engineering"
 	}
 	document.getElementById('hea-button').onclick=function(){
 		fetch(6);
