@@ -54,6 +54,13 @@ div#buttonsfeelings { /* Special properties of the buttons */
     text-align: center;
 }
 
+div#spacemaker {
+	clear: both;
+	border-top: 2px;
+	border-bottom: 2px;
+	padding: 10px;
+}
+
 .btn { /* Boostrapped buttons graphics */ 
     background: #9e54a8;
     background-image: -webkit-linear-gradient(top, #9e54a8, #53286e);

@@ -30,10 +30,10 @@ var options = {
 	colors: ['4D177E'],
 	title: '',
 	hAxis: {
-		title: 'Asked category'
+		title: 'Asked Category'
 	},
 	vAxis: {
-		title: 'Confidence Level'
+		title: 'Number of Students'
 	},
 	legend: {
 		position: 'none'
