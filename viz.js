@@ -50,7 +50,6 @@ function vizInit() {
 	chart = new google.visualization.ColumnChart(document.getElementById('ex0'));
 	
 	//Make the initial query to get the whole Fusion table.
-	console.log("I want sour patch kids");
 	var query = "SELECT 'Major category', 'Asked category', Total FROM 1fn29ujEZ0bobQsAqwnpqQ6ufIE46OWGZRr5JOjWR";
 	
 	var opts = {sendMethod: 'auto'};
@@ -60,12 +59,6 @@ function vizInit() {
 	queryObj.setQuery(query);
 	queryObj.send(function(e){
 		data = e.getDataTable();
-		console.log("here is the data:");
-		console.log(data);
-		//Get major we want to visualize.
-		//var thisMajor = "" + major[0]+"-"+major[0];
-		//var thisMajor = 5;
-		console.log("thisMajor: "+thisMajor);
 		//Create object and get rows corresponding to thisMajor.
 		views[thisMajor] = new google.visualization.DataView(data);
 		
@@ -86,7 +79,6 @@ function vizInit() {
 
 function vizController(theMajor) {
 	thisMajor=theMajor;
-	console.log("Inside vizController fxn. thisMajor: "+thisMajor);
 	//If the view is not null, draw the chart.
 	if(views[theMajor]!=null) {
 		chart.draw(views[theMajor].toDataTable(),options);
