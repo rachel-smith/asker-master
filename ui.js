@@ -20,9 +20,7 @@ librs.ui = function() {
  * Date/author: Team Yoyodyne/10_1_15
  */
 var fetch = function(val) {
-	//var val = 1;
-	console.log("Inside fetch()! val is: ");
-	console.log(val);
+	//pass major selection to viz.js
 	vizController(val);
 };
 
@@ -32,7 +30,11 @@ var toggle = function() {
 
 /*
  * function window onload
- * purpose: buttons on left will toggle between data appropriately.
+ * purpose: buttons on left will toggle between data appropriately on graph.
+ * how it works: when a button is clicked, fetch() is called with the 
+ * 				 appropriate major selction, which will get passed to
+ * 				 the vizcontroller.js file
+ * 
  * author: Rachel Smith
  */
 window.onload = function(){
