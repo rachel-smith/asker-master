@@ -19,20 +19,66 @@ librs.ui = function() {
  *
  * Date/author: Team Yoyodyne/10_1_15
  */
-var fetch = function() {
-	var value = 5;
-	console.log(value);
-	vizController(value);
+var fetch = function(val) {
+	//pass major selection to viz.js
+	vizController(val);
 };
 
-var count = 0;
 var toggle = function() {
 
 };
 
-	var initialize = function() {
-		bar button1 = document.getElementById('submit-btn');
-		button1.onclick = fetch;
+/*
+ * function window onload
+ * purpose: buttons on left will toggle between data appropriately on graph.
+ * how it works: when a button is clicked, fetch() is called with the 
+ * 				 appropriate major selction, which will get passed to
+ * 				 the vizcontroller.js file
+ * 
+ * author: Rachel Smith
+ */
+window.onload = function(){
+	console.log("Inside window onload!");
+	document.getElementById('bus-button').onclick=function(){
+		fetch(1);
+		document.getElementById('currentmajor').innerHTML = "Business"
+	}
+	document.getElementById('hum-button').onclick=function(){
+		fetch(2);
+		document.getElementById('currentmajor').innerHTML = "Humanities or History"
+	}
+	document.getElementById('art-button').onclick=function(){
+		fetch(3);
+		document.getElementById('currentmajor').innerHTML = "Arts"
+	}
+	document.getElementById('har-button').onclick=function(){
+		fetch(4);
+		document.getElementById('currentmajor').innerHTML = "Hard Sciences"
+	}
+	document.getElementById('com-button').onclick=function(){
+		fetch(5);
+		document.getElementById('currentmajor').innerHTML = "Comp Sci, Math, or Engineering"
+	}
+	document.getElementById('hea-button').onclick=function(){
+		fetch(6);
+		document.getElementById('currentmajor').innerHTML = "Health Professions"
+	}
+	document.getElementById('soc-button').onclick=function(){
+		fetch(7);
+		document.getElementById('currentmajor').innerHTML = "Social and Behavioral Sciences"
+	}
+	document.getElementById('edu-button').onclick=function(){
+		fetch(8);
+		document.getElementById('currentmajor').innerHTML = "Education"
+	}
+	document.getElementById('oth-button').onclick=function(){
+		fetch(9);
+		document.getElementById('currentmajor').innerHTML = "Other"
+	}	
+}
+
+var initialize = function() {
+	
 };
 
 // When this file is included at the bottom of the page,

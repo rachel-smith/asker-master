@@ -54,7 +54,14 @@ div#buttonsfeelings { /* Special properties of the buttons */
     text-align: center;
 }
 
-.btn { /* Boostrapped buttons graphics */
+div#spacemaker {
+	clear: both;
+	border-top: 2px;
+	border-bottom: 2px;
+	padding: 10px;
+}
+
+.btn { /* Boostrapped buttons graphics */ 
     background: #9e54a8;
     background-image: -webkit-linear-gradient(top, #9e54a8, #53286e);
     background-image: -moz-linear-gradient(top, #9e54a8, #53286e);
@@ -64,7 +71,7 @@ div#buttonsfeelings { /* Special properties of the buttons */
     font-family: Lato;
     color: #ffffff;
     font-size: 14px;
-    padding: 5px 40px 5px 40px;
+    
     border: solid #b8b8b8 2px !important;
     text-decoration: none;
     margin: 5px;
@@ -83,7 +90,7 @@ div#buttonsfeelings { /* Special properties of the buttons */
 }
 
 .btn:active { /* What the button looks like when clicked on */
-    background: #FFFF00
+    background: #C0C0C0
 }
 
 #content { /* The middle section of the body's properties */
