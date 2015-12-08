@@ -10,7 +10,7 @@ div#footer {
     padding: 30px;
 }
 
-div#notarapper {
+div#unwrap {
     overflow: hidden;
     white-space: nowrap;
 }
