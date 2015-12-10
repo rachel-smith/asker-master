@@ -24,6 +24,14 @@ var fetch = function(val) {
 	vizController(val);
 };
 
+/**
+ * function: toggle
+ * 
+ * purpose: change color of buttons to indicate status.
+ * 			white button is not pressed, yellow indicates pressed button.
+ * 
+ * Date/author: Team Yoyodyne/10_1/15
+ */
 var toggle = function(button) {
  //Set all buttons to white.
  document.getElementById('bus-button').style.color = "white"
@@ -39,8 +47,15 @@ var toggle = function(button) {
  document.getElementById(button).style.color = "yellow" 
 };
 
+/**
+ * function: initialize
+ * 
+ * purpose: update graph title and toggle graph data.
+ * 			will call helper function toggle.
+ * 
+ * Date/author: Team Yoyodyne/10_1_15
+ */
 var initialize = function() {
-	console.log("inside initialize");
 	$(document).ready( function () {
     $('button#bus-button').on('click', function () {
         document.getElementById('currentmajor').innerHTML = "Business"
